@@ -1,23 +1,20 @@
-import React, { memo } from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { TabNavigator } from '../navigator/TabNavigator';
-import SCREEN_ROUTE_APP, { ROUTE_APP } from '../RouteApp';
+import {createStackNavigator} from '@react-navigation/stack';
+import React, {memo} from 'react';
+import {SCREEN_ROUTE} from '../../constants/Constant';
+import {TabNavigator} from '../navigator/TabNavigator';
+import SCREEN_ROUTE_APP from '../RouteApp';
 
 const MainStack = createStackNavigator();
 
 const MainStackComponent = memo(() => {
   return (
     <MainStack.Navigator
-      initialRouteName={ROUTE_APP.MAIN_STACK}
+      initialRouteName={SCREEN_ROUTE.MAIN}
       screenOptions={{
         headerShown: false,
-      }}
-    >
-      <MainStack.Screen
-        name={ROUTE_APP.MAIN_STACK}
-        component={TabNavigator}
-      />
-       {Object.keys(SCREEN_ROUTE_APP).map((elem, index) => (
+      }}>
+      <MainStack.Screen name={SCREEN_ROUTE.MAIN} component={TabNavigator} />
+      {Object.keys(SCREEN_ROUTE_APP).map((elem, index) => (
         <MainStack.Screen
           key={index}
           name={elem}
@@ -28,4 +25,4 @@ const MainStackComponent = memo(() => {
   );
 });
 
-export { MainStackComponent };
+export {MainStackComponent};

@@ -1,8 +1,10 @@
-import { Text } from "react-native"
+import {SafeAreaView, Text} from 'react-native';
 
-const LoginScreen =()=>{
-    return <>
-    <Text>alooo</Text>
-    </>
-}
-export {LoginScreen}
+const LoginScreen = () => {
+  return (
+    <SafeAreaView>
+      <Text>aloegufygeygoo</Text>
+    </SafeAreaView>
+  );
+};
+export {LoginScreen};

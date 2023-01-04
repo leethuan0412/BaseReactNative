@@ -1,5 +1,12 @@
-export const SCREEN_ROUTE={
-    MAIN:'MAIN',
-    AUTH:'AUTH',
-    SPLASH:'SPLASH'
-}
+export const SCREEN_ROUTE = {
+  MAIN: 'MAIN',
+  AUTH: 'AUTH',
+  SPLASH: 'SPLASH',
+};
+export const MAIN_TAB = {
+  HOME: 'HOME',
+  E_VOUCHER: 'E_VOUCHER',
+  QR: 'QR',
+  NOTIFICATION: 'NOTIFICATION',
+  ACCOUNT: 'ACCOUNT',
+};

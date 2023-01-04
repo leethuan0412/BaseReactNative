@@ -1,52 +1,30 @@
-import React, {type PropsWithChildren} from 'react';
-import {
-  Platform,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import React from 'react';
+import {Platform, StyleSheet} from 'react-native';
 import FlashMessage from 'react-native-flash-message';
 import {getStatusBarHeight} from 'react-native-iphone-x-helper';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import {Provider} from 'react-redux';
-import { store } from './src/redux/store';
+import {PersistGate} from 'redux-persist/integration/react';
 import {NavigationUtils} from './src/navigation/NavigationUtils';
 import {NavigationApp} from './src/navigation/navigator/AppNavigator';
+import {persistor, store} from './src/redux/store';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <>
-      <NavigationApp
-        ref={(navigatorRef: any) => {
-          NavigationUtils.setTopLevelNavigator(navigatorRef);
-        }}
-      />
-      {/* <FlashMessage
-        style={styleApp.messageNoti}
-        position="top"
-        floating={true}
-        hideStatusBar={false}
-      /> */}
-
-      <Text>alooo</Text>
-    </>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationApp
+          ref={(navigatorRef: any) => {
+            NavigationUtils.setTopLevelNavigator(navigatorRef);
+          }}
+        />
+        <FlashMessage
+          style={styleApp.messageNoti}
+          position="top"
+          floating={true}
+          hideStatusBar={false}
+        />
+      </PersistGate>
+    </Provider>
   );
 };
 

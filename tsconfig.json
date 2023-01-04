@@ -4,41 +4,27 @@
     "useUnknownInCatchVariables": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "target": "esnext" ,
-    "module": "commonjs" ,
-    "lib": [
-      "es2020"
-    ],
-    "allowJs": true ,
-    "jsx": "react-native" ,
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["es2020"],
+    "allowJs": true,
+    "jsx": "react-native",
 
-    "noEmit": true ,
-    
+    "noEmit": true,
+
     "isolatedModules": true,
 
     "strict": true,
-   
-    "moduleResolution": "node" ,
-    "allowSyntheticDefaultImports": true ,
-    "esModuleInterop": true ,
-   
+
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
     "skipLibCheck": false,
     "resolveJsonModule": true,
     "paths": {
-      "@screens": ["src/screens"],
-      "@redux": ["src/redux"],
-      "@components": ["src/components"],
-      "@assets": ["src/assets"],
-      "@utils": ["src/utils"],
-      "@services": ["src/services"],
-      "@navigation": ["src/navigation"],
-      "@types": ["src/types"],
-      "@theme": ["src/theme"],
-      "@translations": ["src/translations"],
-      "@constants": ["src/constants"],
-      "@instances": ["./src/instances"],
       "@api": ["./src/api"],
-      "@interfaces": ["./src/interfaces"],
+      "@interfaces": ["./src/interfaces"]
     }
   },
   "exclude": [

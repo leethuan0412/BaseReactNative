@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {APP_SLICE} from '@types';
+import {APP_SLICE} from '../../types/index';
 
 export interface accountInterface {
   token: string;
