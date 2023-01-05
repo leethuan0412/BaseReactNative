@@ -1,6 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
+import {SCREEN_ROUTE} from '@src/constants';
 import React, {memo} from 'react';
-import {SCREEN_ROUTE} from '../../constants/Constant';
 import {TabNavigator} from '../navigator/TabNavigator';
 import SCREEN_ROUTE_APP from '../RouteApp';
 

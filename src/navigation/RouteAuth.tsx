@@ -1,4 +1,4 @@
-import {LoginScreen} from '../screen/Auth/LoginScreen';
+import {LoginScreen} from '@src/screen/Auth/LoginScreen';
 
 export const ROUTE_AUTH = {
   HOME: 'HOME',

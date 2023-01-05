@@ -1,34 +1,26 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
-import {R} from '../../assets/R';
-import {colors} from '../../theme';
-
+import {R} from '@src/assets/R';
+import {AppHeader, Block} from '@src/component';
+import AppInput from '@src/component/AppInput';
+import {colors} from '@src/theme';
+import React, {useState} from 'react';
+import {StyleSheet, Text} from 'react-native';
 const HomeScreen = () => {
+  const [mail, setEmail] = useState('');
+
   return (
-    <SafeAreaView>
+    <Block>
+      <AppHeader title="HOIME" goBack />
       <Text style={styles.text}>{R.strings().hello}</Text>
-    </SafeAreaView>
+      <AppInput
+        value={mail}
+        onChangeText={setEmail}
+        placeholder="enter your email"
+        secureTextEntry
+      />
+    </Block>
   );
 };
 const styles = StyleSheet.create({
-  switch: {marginHorizontal: 10},
-  language: {color: colors.text},
-  icon: {
-    width: 22,
-    height: 22,
-    marginRight: 16,
-  },
-  row: {
-    paddingVertical: 18.5,
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderColor: 'rgba(222, 226, 230, 1)',
-  },
-  iconArrow: {
-    width: 22,
-    height: 22,
-  },
   text: {
     color: colors.text,
   },

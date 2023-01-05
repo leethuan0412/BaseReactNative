@@ -1,7 +1,14 @@
-import {CommonActions, StackActions, StackActionType} from '@react-navigation/native';
-import { createRef } from 'react';
+import {
+  CommonActions,
+  StackActions,
+  StackActionType,
+} from '@react-navigation/native';
+import {createRef} from 'react';
 
-type typeNavigation = {dispatch: (arg0: CommonActions.Action | StackActionType) => void; canGoBack: () => boolean;} | null;
+type typeNavigation = {
+  dispatch: (arg0: CommonActions.Action | StackActionType) => void;
+  canGoBack: () => boolean;
+} | null;
 
 let _navigator: typeNavigation;
 
@@ -20,7 +27,7 @@ export function navigate(routeName: string, params?: object | undefined) {
 export const navigationRef = createRef();
 
 export const getCurrentRouteName = () =>
-  navigationRef?.current?.getCurrentRoute().name
+  navigationRef?.current?.getCurrentRoute().name;
 
 export function goBack() {
   if (_navigator?.canGoBack()) {

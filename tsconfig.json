@@ -22,9 +22,19 @@
 
     "skipLibCheck": false,
     "resolveJsonModule": true,
+    "baseUrl": ".",
     "paths": {
-      "@api": ["./src/api"],
-      "@interfaces": ["./src/interfaces"]
+      "@src/*": ["./src/*"],
+      "@constants": ["./src/constants"],
+      "@screen": ["./src/screen"],
+      "@assets": ["./src/assets"],
+      "@language": ["./src/language"],
+      "@navigation": ["./src/navigation"],
+      "@theme": ["./src/theme"],
+      "@redux": ["./src/redux"],
+      "@common": ["./src/common"],
+      "@component": ["./src/component"],
+      
     }
   },
   "exclude": [

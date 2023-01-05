@@ -1,3 +1,7 @@
+import {R} from '@src/assets/R';
+import {MAIN_TAB} from '@src/constants';
+import {HomeScreen} from '@src/screen/Main/HomeScreen';
+import {colors} from '@src/theme';
 import React, {useRef, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Alert} from 'react-native';
@@ -5,10 +9,6 @@ import {Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {CurvedBottomBar} from 'react-native-curved-bottom-bar';
 import FastImage from 'react-native-fast-image';
 import {isIphoneX} from 'react-native-iphone-x-helper';
-import {R} from '../../assets/R';
-import {MAIN_TAB} from '../../constants/Constant';
-import {HomeScreen} from '../../screen/Main/HomeScreen';
-import {colors} from '../../theme/colors';
 
 const {HOME, NOTIFICATION, ACCOUNT, QR, E_VOUCHER} = MAIN_TAB;
 

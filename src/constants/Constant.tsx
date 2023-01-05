@@ -1,3 +1,4 @@
+import {Dimensions, Platform, NativeModules} from 'react-native';
 export const SCREEN_ROUTE = {
   MAIN: 'MAIN',
   AUTH: 'AUTH',
@@ -9,4 +10,16 @@ export const MAIN_TAB = {
   QR: 'QR',
   NOTIFICATION: 'NOTIFICATION',
   ACCOUNT: 'ACCOUNT',
+};
+
+const {width, height} = Dimensions.get('screen');
+const {PlatformConstants} = NativeModules;
+
+export const DEVICE = {
+  isIos: Platform.OS === 'ios',
+  isAndroid: Platform.OS === 'android',
+  width,
+  height,
+  deviceType: PlatformConstants.interfaceIdiom,
+  isSmallDevice: width < 375,
 };

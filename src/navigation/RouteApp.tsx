@@ -1,4 +1,4 @@
-import {HomeScreen} from '../screen/Main/HomeScreen';
+import {HomeScreen} from '@src/screen/Main/HomeScreen';
 
 export const ROUTE_APP = {
   HOME: 'HOME',
