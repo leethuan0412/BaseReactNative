@@ -6,5 +6,9 @@ const images = {
   ic_eye: require('./images/ic_eye.png'),
   img_contact: require('./images/img_contact.png'),
   banner: require('./images/banner.png'),
+  img_calender: require('./images/img_calender.png'),
+  img_circle: require('./images/img_circle.png'),
+  img_message: require('./images/img_message.png')
+
 };
 export default images;

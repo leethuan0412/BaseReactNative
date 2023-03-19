@@ -1,10 +1,13 @@
+import { IntroduceScreen } from '@src/screen/Auth/IntroduceScreen';
 import {LoginScreen} from '@src/screen/Auth/LoginScreen';
 
 export const ROUTE_AUTH = {
-  HOME: 'HOME',
+  LOGIN: 'LOGIN',
+  INTRODUCE : 'INTRODUCE'
 };
-const {HOME} = ROUTE_AUTH;
+const {LOGIN, INTRODUCE} = ROUTE_AUTH;
 const SCREEN_ROUTE_AUTH = {
-  [HOME]: LoginScreen,
+  [INTRODUCE]:IntroduceScreen,
+  [LOGIN]: LoginScreen,
 };
 export default SCREEN_ROUTE_AUTH;
