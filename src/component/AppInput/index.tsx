@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   iconRight: {
     width: 24,
     aspectRatio: 1,
-    marginLeft: 10,
+    marginRight: 10,
   },
   iconLeft: {
     width: 24,

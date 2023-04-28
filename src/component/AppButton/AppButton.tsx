@@ -7,6 +7,8 @@ import {
   StyleProp,
   Text,
   StyleSheet,
+  ImageSourcePropType,
+  Image,
 } from 'react-native';
 import {debounce} from 'lodash';
 import {Spacing} from '../appSpacing';
@@ -16,7 +18,7 @@ export interface ButtonProps extends TouchableOpacityProps {
   label: string;
   secureTextEntry?: boolean;
   disabled?: boolean;
-  Icon?: any;
+  sourceIcon?: ImageSourcePropType | undefined;
   onPress?: () => void;
   style?: StyleProp<ViewStyle>;
   labelStyle?: TextStyle | TextStyle[];
@@ -43,7 +45,7 @@ export function AppButton(props: ButtonProps) {
     label,
     onPress = () => {},
     style,
-    Icon,
+    sourceIcon,
     labelStyle,
     disabled,
     numberOfLines,
@@ -69,7 +71,7 @@ export function AppButton(props: ButtonProps) {
             handler();
           }
         }}>
-        {!!Icon && <Icon style={styles.icon} />}
+        {sourceIcon && <Image source={sourceIcon} resizeMode='contain' style={styles.icon}/>}
         <Text style={labelStyle} numberOfLines={numberOfLines}>
           {label}
         </Text>
@@ -83,10 +85,11 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   icon: {
-    marginLeft: Spacing.width20,
+    marginRight: Spacing.width20,
   },
   btn: {
     alignItems: 'center',
     alignSelf: 'center',
+    flexDirection:'row'
   },
 });
