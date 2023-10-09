@@ -7,8 +7,8 @@ import {colors} from '../../theme/colors';
 import {FontSize} from '../fontSize';
 import {enhance} from '../../common';
 
-const WIDTH_OTP = 45;
-const HEIGHT_OTP = 45;
+const WIDTH_OTP = 20;
+const HEIGHT_OTP = 20;
 
 const styles = StyleSheet.create({
   wrap: {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   otpView: {
     width: WIDTH_OTP,
     height: HEIGHT_OTP,
-    borderRadius: 8,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 0,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   otpText: {
     fontSize: FontSize.Font14,
-    color: '#FFA200',
+    color: 'transparent',
     textAlignVertical: 'bottom',
   },
   sizeBoxW15: {
@@ -121,7 +121,14 @@ const OtpComponent = (props: OtpProps) => {
             return (
               <Block key={index} style={row}>
                 <Block
-                  style={[wrapInput, index === otp.length && wrapInputActive]}>
+                  style={[
+                    wrapInput,
+                    index === otp.length && wrapInputActive,
+                    {
+                      backgroundColor:
+                        index >= otp.length ? colors.white : '#1447FC',
+                    },
+                  ]}>
                   <Text
                     children={
                       index <= otp.length - 1

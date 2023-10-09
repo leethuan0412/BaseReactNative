@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "949246107715",
+    "project_id": "basern-6b195",
+    "storage_bucket": "basern-6b195.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949246107715:android:2476c42b4e6c1b69a474f6",
+        "android_client_info": {
+          "package_name": "com.basern"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCku3PUacC6lgOHbmkgzLHn4v90XTzZlQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

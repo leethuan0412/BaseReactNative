@@ -1,3 +1,4 @@
+import useNotification from '@src/utils/notification';
 import React from 'react';
 import {Platform, StyleSheet} from 'react-native';
 import FlashMessage from 'react-native-flash-message';
@@ -7,8 +8,8 @@ import {PersistGate} from 'redux-persist/integration/react';
 import {NavigationUtils} from './src/navigation/NavigationUtils';
 import {NavigationApp} from './src/navigation/navigator/AppNavigator';
 import {persistor, store} from './src/redux/store';
-
 const App = () => {
+  useNotification();
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>

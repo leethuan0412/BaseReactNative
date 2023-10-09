@@ -78,11 +78,10 @@ const IntroduceScreen = () => {
 
   const ScrollToNext = () => {
     if (currentIndex < dataIntro.length - 1) {
-      sliceRef.current.scrollToIndex({index: currentIndex + 1});
+      sliceRef?.current?.scrollToIndex({index: currentIndex + 1});
     } else NavigationUtils.navigate(ROUTE_AUTH.LOGIN);
   };
   const handleOnViewableItemsChanged = useRef(({viewableItems}: any) => {
-    console.log('viewableItems', viewableItems);
     setCurrentIndex(viewableItems[0].index);
   }).current;
 

@@ -6,7 +6,10 @@ install! 'cocoapods', :deterministic_uuids => false
 
 target 'BaseRN' do
   config = use_native_modules!
-
+  pod 'Firebase', :modular_headers => true
+  pod 'FirebaseCoreInternal', :modular_headers => true
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
   # Flags change depending on the env values.
   flags = get_default_flags()
 
@@ -39,6 +42,12 @@ target 'BaseRN' do
       :mac_catalyst_enabled => false
     )
     installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+        if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] < '12.4'
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.4'
+        end
+      end
       if target. respond_to? (:product_type) and target.product_type == "com. apple.product-type. bundle"
       target.build_configurations.each do Iconfig|
       config. build_settings[' CODE_SIGNING_ALLOWED'] = 'NO'
