@@ -1,16 +1,13 @@
 import {Block} from '@src/component';
 import {Spacing} from '@src/component/appSpacing';
 import {FontSize} from '@src/component/fontSize';
-import {StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
 
 const LoginScreen = () => {
   return (
-    <Block flex={1}>
-      {/* <AppHeader
-      goBack
-      /> */}
+    <SafeAreaView>
       <Text style={styles.title}>Let’s you in</Text>
-    </Block>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
@@ -18,7 +15,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.Font45,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: Spacing.height40,
+    // marginTop: Spacing.height40,
   },
 });
 export {LoginScreen};

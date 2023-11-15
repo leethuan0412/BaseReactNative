@@ -23,6 +23,6 @@ const accountSlice = createSlice({
     },
   },
 });
-
+export const userSelector = (state: {account: any}) => state.account;
 export const {setAccountToken, setUserProfile} = accountSlice.actions;
 export default accountSlice.reducer;
